@@ -1,0 +1,31 @@
+.clickable{
+	cursor: pointer
+}
+.drop{
+	font-color:#000000;
+}
+.header-area {
+    position: relative;
+    z-index: 10000;
+    width: 100%;
+    height: auto;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    margin-bottom: 3%;
+}
+
+.main-header-area .classy-nav-container {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+    box-shadow: 1px 1px 12px #ccc;
+}
+
+.main-header-area .classynav ul li a {
+    color: #70665c;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.nav-brand img{
+    width:27%;
+}

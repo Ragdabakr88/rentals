@@ -1,0 +1,60 @@
+<div class="container">
+ <h2 class="title">الشاليهات </h2>
+ <hr>
+
+<div *ngIf="rentals && rentals.length > 0">
+
+<table class="table">
+  <thead class="thead-inverse" >
+    <tr>
+      <th>حذف  </th>
+      
+      <th>السعر </th>
+      <th>المدينه </th>
+      <th>الشارع </th>
+      <th>الحجوزات </th>
+      <th>وقت الانشاء </th>
+      <th>العنوان </th>
+      
+    </tr>
+  </thead>
+  <tbody *ngFor="let rental of rentals ;let i =index">
+  	<tr>
+
+        <td><button type="button" class="btn btn-danger" 
+        (click)="rentalDeleteIndex = i"
+        *ngIf="rentalDeleteIndex !== i"
+        >احذف </button>
+         <div 
+        *ngIf="rentalDeleteIndex === i">
+        <p>هل انت متاكد من الحذف  </p>
+        <button type="button" class="btn btn-success"
+         (click)="deleteRental(rental._id)">نعم </button>
+
+        <button type="button" class="btn btn-danger" 
+         (click)="rentalDeleteIndex = undefined">لا </button>
+        
+        </div>
+      
+      </td>
+      <td>{{rental.dailyRate }}</td>
+      <td>{{rental.city}}</td>
+      <td>{{rental.street}}</td>
+      <td><a  *ngIf="rental.bookings.length > 0" routerLink="/manageBookings">كل  الحجوزات </a><a  *ngIf="rental.bookings.length === 0">لا يوجد حجز </a></td>
+      <td>{{rental.createdAt | formatDate}}</td>
+      <th scope="row"><a routerLink="/rentals/{{rental._id}}">{{rental.title}}</a></th>
+
+
+
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+    <div *ngIf="rentals && rentals.length === 0" class="alert alert-warning">
+      ليس لديك اي شاليهات 
+      <a class="btn btn-bwm" routerLink="/new">الشاليهات المتاحه </a>
+    </div>
+
+</div>

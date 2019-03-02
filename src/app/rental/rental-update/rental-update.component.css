@@ -1,0 +1,16 @@
+.rental-owner {
+	float:right;
+}
+
+.rental-owner img{
+	border-radius: 50%;
+	height:50px;
+	display:block;
+	margin: 0 auto;
+}
+
+.rental-owner span{
+font-size: 13px;
+display:block;
+font-weight: 300
+}

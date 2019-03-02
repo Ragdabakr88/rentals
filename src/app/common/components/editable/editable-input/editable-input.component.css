@@ -1,0 +1,12 @@
+.inline{
+	display:inline-block;
+}
+
+.title{
+	font-size: 30px;
+}
+.btn-editable{
+	margin-left: 5px;
+	color:#ffffff;
+	font-size: 12px;
+}

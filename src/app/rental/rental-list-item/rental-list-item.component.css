@@ -1,0 +1,14 @@
+.link{
+	text-align: center;
+	color:#c60300;
+	text-decoration: none;
+	
+}
+.single-featured-property .property-content p {
+    margin-bottom: 10px;
+}
+
+.img{
+	width:1200px !important;
+	height:250px !important;
+}

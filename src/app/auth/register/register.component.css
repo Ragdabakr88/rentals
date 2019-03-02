@@ -1,0 +1,145 @@
+body{
+  background-color: #f2f5f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 20px);
+  font-family: 'Mukta', sans-serif;
+}
+a{
+  text-decoration: none;
+  color: #444;
+}
+.title {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+.subtitle{
+  font-weight: 300;
+  color: #444;
+}
+.brand{
+  color: #1d5cf9;
+  letter-spacing: 10px;
+  font-size: 22px;
+  font-weight: 700;
+  padding-left: 8px;
+}
+.container{
+    width: 370px;
+    background-color: #fffefe;
+    border-color: #ccc;
+    border: 2px solid #0b85ed00;
+    box-shadow: 3px 5px 40px 2px #ccc;
+    padding-top: 20px;
+    padding-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 12px;
+    position: relative;
+}
+.container::after{
+  content: '';
+  width: 90%;
+  left: 5%;
+  bottom: 0px;
+  height: 25px;
+  z-index: -1;
+  background-color: transparent;
+  position: absolute;
+  box-shadow: 0 10px 90px #add6f9;
+}
+
+
+
+.row{
+  width: 100%;
+}
+
+.input-group{
+  display: flex; 
+}
+.input-group svg{
+  font-size: 18px;
+  border: 1px solid #eee;
+  border-right: none;
+  padding: 10px;
+  color: #ddd;
+  background-color: #fff;
+}
+
+.row input{
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid #eee;
+  border-left: none;
+  color: #000;
+}
+
+
+.row input:focus{
+  outline: none;
+}
+
+.bb-none svg, .bb-none input{
+  border-bottom: none;
+}
+button{
+  width: 50%;
+  background-color: #c60300;
+  color: #fff;
+  padding: 13px;
+  font-size: 14px;
+  border-radius: 100px;
+  border: none;
+  position: relative;
+  left: 25%;
+  box-shadow: 0 15px 40px #add6f9;
+  margin-top: 70px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  font-weight: 300;
+}
+button:focus{
+   outline: none;
+}
+
+button svg{
+  position: absolute;
+  top: 8px;
+  width: 15px;
+  margin-left: 10px;
+}
+
+.singup{
+  margin-top: 50px;
+  text-align: center;
+  color: #444;
+  font-size: 14px;
+
+}
+.singup a{
+  color: #1d5cf9;
+  font-weight: 600;
+}
+input{
+    width: 100%;
+    padding: 3%;
+    margin-top: 2%;
+    /* border-radius: 80%; */
+    border-raduis: 3;
+    font-size: 14px;
+    border: 1px solid #eee;
+    border-left: none;
+    color: #000;
+}
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    width: 100%;
+}
+input [placeholder]{
+  text-align: right;
+}

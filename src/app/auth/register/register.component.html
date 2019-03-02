@@ -1,0 +1,79 @@
+
+    <section class="featured-properties-area">
+        <div class="container">
+            <div class="container">
+  <div class="title">
+    <div class="brand">
+    </div>
+    <div class="subtitle">
+       انشاء حساب 
+    </div>
+  </div>
+
+   <div *ngIf="errors.length > 0" class="alert alert-danger">
+    <p *ngFor="let error of errors">
+      {{error.detail}}
+    </p>
+  </div>
+    
+    <form #registerForm="ngForm">
+      <div class="row">
+        <div class="input-group bb-none">
+           <i data-feather="user"></i>
+          <input name="username" [(ngModel)]="formData.username" #username="ngModel" type="text" placeholder="الاسم " required >
+
+           <div *ngIf="username.invalid && (username.dirty || username.touched)"
+		          class="alert alert-danger">
+		            <div *ngIf="username.errors.required">
+		                اسم المستخدم مطلوب 
+		             </div>
+		            </div>
+              </div>
+           </div>
+       <div class="row">
+        <div class="input-group bb-none">
+          <i data-feather="lock"></i>
+          <input [(ngModel)]="formData.email" name="email" #email="ngModel" type="email" placeholder=" الايميل  " required>
+           <div *ngIf="email.invalid && (email.dirty || email.touched)"
+               class="alert alert-danger">
+                 <div *ngIf="email.errors.required">
+               الايميل مطلوب 
+           </div>
+         </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-group bb-none">
+          <i data-feather="lock"></i>
+          <input [(ngModel)]="formData.password" name="password" #password="ngModel" type="password" placeholder="كلمه المرور " required>
+
+          <div *ngIf="password.invalid && (password.dirty || password.touched)"
+                class="alert alert-danger">
+                  <div *ngIf="password.errors.required">
+                الرقم السري مطلوب 
+          </div>
+         </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-group">
+          <i data-feather="lock"></i>
+          <input [(ngModel)]="formData.passwordConfirmation" name="passwordConfirmation" type="password" placeholder="تاكيد كلمه المرور " required>
+        </div>
+      </div>
+    <div class="row">
+      <button [disabled]="!registerForm.form.valid" (click)="register()">انشاء حساب  <i data-feather="chevron-right"></i></button>
+    </div>
+  </form>
+
+ 
+
+
+    <div class="row">
+      <div class="singup">
+        امتلك حساب سابق  <a target="_blank" routerLink="/login">تسجيل دخول  </a>
+      </div>
+  </div>
+</div>
+        </div>
+    </section>

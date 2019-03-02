@@ -1,0 +1,18 @@
+{
+  "rentals": [{
+    "city":"jeddah",
+    "bedrooms":2
+  }
+      
+  ],
+  "users": [{
+    "username": "mona",
+    "email": "mona@yahoo.com",
+    "password": "123"
+    },{
+    "username": "Test User1",
+    "email": "test1@gmail.com",
+    "password": "testtest1"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+
+    <section class="featured-properties-area">
+        <div class="container">
+            <div class="container">
+  <div class="title">
+    <div class="brand">
+    </div>
+    <div class="subtitle">
+      تسجيل دخول 
+    </div>
+  </div>
+
+   <div *ngIf="errors.length > 0" class="alert alert-danger form-control">
+    <p *ngFor="let error of errors">
+      {{errors.detail}}
+    </p>
+  </div>
+ 
+  <div *ngIf="notifyMessage" class="alert alert-success ">
+  {{notifyMessage}}
+</div>
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+  
+       <div class="row">
+        <div class="input-group bb-none">
+          <i data-feather="lock"></i>
+          <input type="email" placeholder="Email" required formControlName="email" class="form-control">
+
+             <div *ngIf="loginForm.controls['email'].invalid && (loginForm.controls['email'].dirty || loginForm.controls['email'].touched)"
+               class="alert alert-danger">
+
+                 <div *ngIf="loginForm.controls['email'].errors.required">
+              الايميل مطلوب 
+                  </div>
+                   <div *ngIf="loginForm.controls['email'].errors.pattern">
+                 الايميل يجب ان يكون صحيح
+               </div>
+
+            </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-group bb-none">
+          <i data-feather="lock"></i>
+          <input type="password" placeholder="كلمه المرور " required formControlName="password">
+             <div *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)"
+               class="alert alert-danger">
+                 <div *ngIf="loginForm.controls['password'].errors.required">
+               كلمه المرور مطلوبه 
+           </div>
+         </div>
+        </div>
+      </div>
+
+    <div class="row">
+      <button [disabled]="!loginForm.valid">دخول  <i data-feather="chevron-right"></i></button>
+    </div>
+  </form>
+
+ 
+
+
+    <div class="row">
+      <div class="singup">
+        لا امتلك حساب  <a target="_blank" routerLink="/register">انشاء حساب </a>
+      </div>
+  </div>
+</div>
+        </div>
+    </section>
+

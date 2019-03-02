@@ -1,0 +1,43 @@
+<!-- ##### Featured Properties Area Start ##### -->
+
+    <section class="featured-properties-area ">
+        <div class="container">
+            
+
+                  <!--   <div class="col-12 col-md-6 col-xl-4"  *ngFor="let rental of rentals">
+                  <app-rental-list-item [rental]='rental'></app-rental-list-item>
+                        </div> -->
+
+          <section class="sortdata">
+          <div class="container">            
+              <div class="row">
+                      <div class="col-xs-12 col-md-6 left ">
+                    
+                         <input   type="text" [(ngModel)]="cat" name="cat" placeholder=" تصنيف بواسطه الاسم  ">
+                          <input  class="col-xs-4" type="text" [(ngModel)]="term" name="term" placeholder=" تصنيف بواسطه المدينه  ">
+                      </div>
+
+                      <div class="col-xs-12 col-md-6 "> 
+                        <button class="col-xs-2"  (click)="sort()">الاقل سعرا </button>
+                        <button class="col-xs-2" (click)="sortReverse()"> الاعلي سعرا </button>
+                      </div>
+                      
+                     
+                  </div>
+                </div>
+              </section> 
+
+             <div class="row">       
+               <ul>
+                 <li class="col-md-4" *ngFor="let rental of rentals  |filter:term  |filterCat:cat  | paginate: { itemsPerPage: 9, currentPage: p } " > 
+                    <app-rental-list-item   [rental]='rental'></app-rental-list-item>
+                 </li>            
+               </ul>
+       
+              <pagination-controls (pageChange)="p = $event" ></pagination-controls>
+            </div>
+
+        </div>
+    </section>
+   
+    <!-- ##### Featured Properties Area End ##### -->

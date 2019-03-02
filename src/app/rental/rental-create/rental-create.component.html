@@ -1,0 +1,126 @@
+<div class="form-style-10" >
+<h1>اضف  <span>عقار جديد </span></h1>
+
+   <div *ngIf="errors.length > 0" class="alert alert-danger">
+    <p *ngFor="let error of errors">
+      {{error.detail}}
+    </p>
+  </div>
+    
+
+
+<form #rentalForm="ngForm">
+    <div class="section"> المكان والعنوان  </div>
+    <div class="inner-wrap">
+        <label>العنوان 
+            <input [(ngModel)]="newRental.title"
+             #title="ngModel" 
+             type="text" 
+             name="title" 
+             required />
+         </label>
+
+        <label>المدينه 
+            <input type="text" [(ngModel)]="newRental.city"
+             #city="ngModel"  
+             name="city" 
+             required >
+        </label>
+
+        <label>الشارع 
+            <input type="text" 
+            [(ngModel)]="newRental.street"
+             #street="ngModel"
+            name="street"
+            required />
+        </label>
+    </div>
+
+    <div class="section">الاقسام   </div>
+    <div class="inner-wrap">
+        <label>Shared 
+            <input type="checkbox" 
+            [(ngModel)]="newRental.shared"
+             #shared="ngModel" 
+             name="shared" 
+             required /> 
+        </label>
+         
+        <label>القسم </label>
+             <select class="form-control"
+                    id="category"
+                    name="category"
+                    [(ngModel)]="newRental.category"
+                    required>
+              <option *ngFor="let category of rentalCategories"> {{category}} </option>   
+            </select>
+       </div>
+
+    <div class="section">خصائص العقار   </div>
+        <div class="inner-wrap">
+     
+          <div class="form-group">
+            <app-image-upload (imageUploaded)="handleImageUpload($event)"
+                              (imageError)="handleImageError($event)">
+            </app-image-upload>
+          </div>
+
+
+        <label>غرف النوم 
+            <input [(ngModel)]="newRental.bedrooms" 
+            #bedrooms="ngModel" 
+            type="number" 
+            name="bedrooms"  
+            class="form-control" 
+            placeholder="Bedrooms" 
+            required />
+        </label>
+
+        <label>الحمامات  
+            <input type="number" 
+            name="bathrooms" 
+            [(ngModel)]="newRental.bathrooms" 
+            #bathrooms="ngModel" 
+            class="form-control" 
+            placeholder="bathrooms" 
+            required />
+        </label>
+
+        <label >المساحه 
+            <input type="number" 
+            name="space" 
+            [(ngModel)]="newRental.space"
+             #space="ngModel" 
+             class="form-control" 
+             placeholder="Space" 
+             required="" />
+         </label>
+
+        <label>السعر 
+            <input type="number" 
+            name="dailyRate" 
+            [(ngModel)]="newRental.dailyRate" 
+            #dailyRate="ngModel" 
+            class="form-control" 
+            placeholder="dailyRate" 
+            required/>
+        </label>
+
+        <label>الوصف  </label>
+        <textarea  name="description" 
+        [(ngModel)]="newRental.description" 
+        #description="ngModel" 
+        required="">
+    </textarea>
+
+    </div>
+
+    <div class="button-section">
+     <input [disabled]="!rentalForm.form.valid "
+      (click)="createRental()" type="submit" name="اضف  " />
+     <span class="privacy-policy">
+     <input type="checkbox" name="field7">هل تقبل بجميع الشروط  
+     </span>
+    </div>
+</form>
+</div>

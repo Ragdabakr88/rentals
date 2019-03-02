@@ -1,0 +1,50 @@
+
+                   
+                  
+
+
+                    <div class="col-md-12 single-featured  single-featured-property mb-50 wow fadeInUp" data-wow-delay="600ms">
+                        <!-- Property Thumbnail -->
+                        <div class="property-thumb">
+                            <img class="img" [src]="serverUrl+rental.image" alt="">
+
+                            <div class="tag">
+                                <span>{{rental.category}}</span>
+                            </div>
+                            <div class="list-price">
+                                <p>ريال  {{rental.dailyRate}}/ ليله </p>
+                            </div>
+                        </div>
+                        <!-- Property Content -->
+                        <div class="property-content">
+                            <h5>{{rental.city}}</h5>
+                            <p class="location">{{rental.street}}</p>
+
+                            <p>{{rental.shared ? 'Shared' :'Whole'}}</p>
+
+                                <p>{{rental.title | uppercase}}</p>
+
+                         
+                            <div class="property-meta-data d-flex align-items-end justify-content-between">
+                                <div class="new-tag">
+                                    <img src="assets/img/icons/new.png" alt="">
+                                   
+                                </div>
+                                <div class="bathroom">
+                                    <img src="assets/img/icons/bathtub.png" alt="">
+                                    <span>{{rental.bathrooms}}</span>
+                                </div>
+                                <div class="garage">
+                                    <img src="assets/img/icons/garage.png" alt="">
+                                    <span>{{rental.bedrooms}}</span>
+                                </div>
+                                <div class="space">
+                                    <img src="assets/img/icons/space.png" alt="">
+                                    <span>{{rental.space}} sq ft</span>
+                                </div>
+                            </div>
+                            <hr>
+                            <a class="link" href="/rentals/{{rental._id}}">احجز شاليهك الان</a>
+                        </div>
+                    </div>
+                    <h1></h1>

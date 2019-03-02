@@ -1,0 +1,188 @@
+
+
+<div class="main">
+  <div class="header">
+    <h2 >
+     "الرفاهية العائليّة"
+    </h2>
+    <p>هي الوصف الأمثل لإقامة عائليّة مميّزة</p>
+   
+  </div>
+      
+
+
+  <div class="side">
+
+    <div class="txt">
+
+    </div>
+  <div class="boxes">
+      <div class="first-line">
+        <div id="f1">
+          <div class="inside">
+            
+            <h3>
+             اعلن عن شاليهك 
+            </h3>
+            <h4>
+             <a class="dropdown-item clickable "  routerLink="/new">انشئ شاليه </a>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="second-line">
+        <div id="f2">
+          <div class="inside">
+            <span></span>
+            <h3>جميع الشاليهات  </h3>
+            <h4>
+              <a class="dropdown-item clickable "  routerLink="/rentals">القي نظره </a>
+            </h4>
+          </div>
+        </div>
+        <!-- <div id="f3">
+          <div class="inside">
+            <span></span>
+            <h3>BATHROOM INTERIER</h3>
+            <h4>
+              Watch ideas!
+            </h4>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div> 
+  <div class="slidep">
+
+    <div class="slider" style="--total: 5">
+      <div id="slide-1" class="slide" style="--i:1" tabindex="0"><img src="http://cdn.home-designing.com/wp-content/uploads/2012/09/Brown-cream-living-room.jpeg">
+        
+      </div>
+      <div id="slide-2" class="slide" style="--i:2" tabindex="0"><img src="https://imageresizer.static9.net.au/Eq2ZhMc_p_5VOLyDvY_50R3iscE=/1920x0/http%3A%2F%2Fprod.static9.net.au%2F_%2Fmedia%2FTV%2FT%2FThe-Block%2FSeason13%2FRoom-Reveals%2FH4-RM1-Bathroom-Sticks-Wombat-Low-res%2FH4-RM1-Bathroom-Sticks--Wombat05.jpg">
+       
+      </div>
+      <div id="slide-3" class="slide" style="--i:3" tabindex="0"><img src="https://i.pinimg.com/originals/b7/48/98/b74898796fd9073ebd85ca9a6ce9d8b7.jpg">
+       
+      </div>
+      <div id="slide-4" class="slide" style="--i:4" tabindex="0"><img src="https://www.bebitalia.com/sites/default/files/styles/original/public/04_B%26B_MichelClub.jpg?itok=SaSGHEou">
+     
+      </div>
+
+      <nav class="slide-nav">
+        <a href="#slide-1" tabindex="-1"><i class="far fa-dot-circle"></i></a>
+        <a href="#slide-2" tabindex="-1"><i class="far fa-dot-circle"></i></a>
+        <a href="#slide-3" tabindex="-1"><i class="far fa-dot-circle"></i></a>
+        <a href="#slide-4" tabindex="-1"><i class="far fa-dot-circle"></i></a>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <!-- ##### Advance Search Area Start ##### -->
+    <div class="south-search-area" style="margin-top: 140px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="advanced-search-form">
+                        <!-- Search Title -->
+                        <div class="search-title">
+                            <p> ابحث عن وجهتك القادمه  </p>
+                        </div>
+                        <!-- Search Form -->
+                        <form action="#" method="post" id="advanceSearch">
+                            <div class="row">
+ 
+                              <!-- <div class="col-12 col-md-4 col-lg-3  right">
+                                    <div class="form-group">
+                                        <input #spaceSearch type="input" class="form-control" name="input" placeholder=" المساحه الكليه ">
+                                    </div>
+                                </div> -->
+
+                                <div class="col-12 col-md-4 col-lg-4  right">
+                                    <div class="form-group">
+                                        <input #bedSearch type="input" class="form-control" name="input" placeholder="عدد  غرف النوم ">
+                                    </div>
+                                </div>
+
+                                  <div class="col-12 col-md-4 col-lg-4">
+                                            <div class="form-group">
+                                                <select  #catSearch  class="form-control" id="types">
+                                                    <option value="xx">نوع الشاليه </option>
+                                                    <option  value="condo" >شقه <span></span></option>
+                                                    <option  value="house"> شاليه <span></span></option>
+                                                    <option  value="apartment" > فيلا <span></span></option>
+                                                  >
+                                                </select>
+                                            </div>
+                                        </div>
+
+
+
+                               
+                                   <div class="col-12 col-md-4 col-lg-4  right">
+                                    <div class="form-group">
+                                        <input #citySearch type="input" class="form-control" name="input" placeholder=" اسم المدينه ">
+                                    </div>
+                                </div>
+
+                                <div class="col-12 d-flex justify-content-between align-items-end"> 
+                                    <!-- Submit -->
+                                    <div class="form-group mb-0 text-center ">
+                                        <button  (click)="search(citySearch.value,bedSearch.value,catSearch.value)" type="submit" class="btn south-btn">ابحث</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Advance Search Area End ##### -->
+ 
+     
+
+  <!--   <app-rental-list></app-rental-list>  -->
+    <section class="featured-properties-area section-padding-100-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading wow fadeInUp">
+                        <h2> خيارات عديدة لأماكن الإقامة </h2>
+                        <p> شاليهات مريحة وإطلالات ساحرة على مدار العام </p>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="row">
+             <ul>
+                <li class="col-md-4" *ngFor="let rental of rentals | paginate: { itemsPerPage: 6, currentPage: p }">
+
+               <app-rental-list-item   [rental]='rental'></app-rental-list-item>
+                  </li> 
+               
+              </ul>
+              <pagination-controls (pageChange)="p = $event" ></pagination-controls>
+            </div>
+        </div>
+    </section>
+
+   <!-- ##### Call To Action Area Start ##### -->
+    <section class="call-to-action-area bg-fixed bg-overlay-black" style="background-image: url(../assets/img/blog-img/blog1.jpg)">
+        <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-12">
+                    <div class="cta-content text-center">
+                        <h2 class="wow fadeInUp" data-wow-delay="300ms"> هل تبحث عن شاليه لعطلتك  </h2>
+                        <h6 class="wow fadeInUp" data-wow-delay="400ms"></h6>
+                        <a routerLink="/rentals" class="btn south-btn mt-50 wow fadeInUp" data-wow-delay="500ms">جميع الشاليهات  </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Call To Action Area End ##### -->
+
+

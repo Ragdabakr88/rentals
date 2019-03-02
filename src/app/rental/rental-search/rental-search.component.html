@@ -1,0 +1,29 @@
+ <!--##### Featured Properties Area Start ##### -->
+    <section class="featured-properties-area section-padding-100-50">
+        <div class="container">
+          <!--   <div class="row">
+                <div class="col-12">
+                    <div class="section-heading wow fadeInUp">
+                        <h2 *ngIf="rentals.length > 0">Find rentals of </h2>
+                        <h2 *ngIf="errors.length > 0">No Rentals Found</h2>
+                        <p  *ngFor let error of errors>
+                            {{error.detail}}
+                        </p>
+                        <p>Suspendisse dictum enim sit amet libero malesuada feugiat.</p>
+                    </div>
+                </div>
+            </div>
+ -->
+            
+              <div class="row">
+                <ul>
+                  <li *ngFor="let rental of rentals | paginate: { itemsPerPage: 9, currentPage: p }">          
+               <app-rental-list-item   [rental]='rental'></app-rental-list-item>
+                </li>
+              </ul>
+              <pagination-controls (pageChange)="p = $event" ></pagination-controls>
+            </div>
+            
+        </div>
+    </section>
+    <!-- ##### Featured Properties Area End ##### -->

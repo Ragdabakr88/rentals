@@ -1,0 +1,32 @@
+          
+<button class="btn btn-primary" (click)="openReviewModal(content)">Write a Review</button>
+<div class="modal-content">
+<ng-template #content let-c="close" let-d="dismiss" class="modal-content">
+
+  <div class="modal-header">
+    <h4 class="modal-title">Write a Review</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+    	 <textarea rows="5"
+                class="form-control"
+                placeholder="Write about your experience in this place"
+                id="text"
+                name="text"
+                [(ngModel)]="review.text"
+                >
+    	</textarea>
+    	<star-rating [starType]="'svg'" [rating]="2.63" (ratingChange)="handleRatingChange($event)"></star-rating>
+    </form>
+  </div>
+  <div class="modal-footer" >
+    <button type="button" class="btn btn-bwm btn-success" (click)="confirmReview(review)">Confirm</button>
+    <button type="button" class="btn btn-bwm btn-danger" (click)="c('Close click')">Close</button>
+  </div>
+
+
+</ng-template>
+</div>

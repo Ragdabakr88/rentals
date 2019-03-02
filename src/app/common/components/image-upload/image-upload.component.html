@@ -1,0 +1,19 @@
+<label  >
+<span class="btn btn-danger">Selected Image</span>
+<input 
+       #imageInput
+       type="file" 
+       accept="image/*"
+       (change)="processFile(imageInput)"
+       >
+<div >
+       <img [src]="selectedFile.src">
+  </div>
+
+  <!-- <div *ngIf="selectedFile.pending" class='img-loading-overlay'>
+    <div class='img-spinning-circle'></div>
+  </div> -->
+
+  <div *ngIf="selectedFile.status === 'OK'" class='alert alert-success'> Image Uploaded Sucesfuly! </div>
+  <div *ngIf="selectedFile.status === 'FAIL'" class='alert alert-danger'> Image Upload Failed </div>
+

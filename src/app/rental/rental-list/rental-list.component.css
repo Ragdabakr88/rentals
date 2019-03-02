@@ -1,0 +1,56 @@
+.sortdata{
+	background-color: #f5f5f5;
+	margin-bottom: 20px;
+	padding: 30px 0px;
+	text-align: right;
+
+
+}
+input {
+    overflow: visible;
+    border: 1px;
+    height: 55px;
+    width: 160px;
+    box-shadow: 2px 2px 8px #ccc;
+    outline: none;
+    padding-left: 20px;
+   
+}
+label{
+	
+}
+.sort{
+	text-align: right;
+}
+input [placeholder]{
+color:#f5f5f5;
+}
+button{
+	-webkit-appearance: button;
+    height: 55px;
+    background-color: #ffffff;
+    width: 100px;
+    outline: none;
+    border:none;
+    cursor: pointer
+
+}
+button:hover{
+    background-color: #c60300;
+    color:#ffffff;
+}
+
+.left{
+	text-align: left;
+}
+.featured-properties-area {
+	margin-top: 20px;
+}
+
+
+.ngx-pagination .current {
+    padding: 0.1875rem 0.625rem;
+    background: #c60300 !important;
+    color: #fefefe;
+    cursor: default;
+}
