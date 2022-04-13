@@ -28,7 +28,7 @@
     "@ng-bootstrap/ng-bootstrap": "^2.0.0",
     "@types/jquery": "^3.2.12",
     "angular-star-rating": "^4.0.0-beta.3",
-    "async": "^2.6.1",
+    "async": "^3.2.2",
     "aws-sdk": "^2.401.0",
     "bcrypt-nodejs": "0.0.3",
     "bcryptjs": "^2.4.3",
